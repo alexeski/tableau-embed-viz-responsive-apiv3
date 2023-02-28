@@ -147,11 +147,10 @@ function scaleViz(currentWidth, maxWidth, deviceType) {
     // tweak Flexbox to ensure the Tableau iframe content is always centered correctly to the page, regardless of scaling or device type
     let elems = document.getElementsByTagName("tableau-viz");
     for (let i = 0; i < elems.length; i++) {
+      elems[i].style.justifyContent = "center";
       if (scalingFactor === 1) {
-        elems[i].style.justifyContent = "center";
         elems[i].style.position = "relative";
       } else {
-        elems[i].style.justifyContent = "center";
         elems[i].style.position = "absolute";
       }
     }
