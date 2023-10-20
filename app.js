@@ -1,7 +1,7 @@
 import {
   TableauViz,
   TableauEventType,
-} from "https://10ax.online.tableau.com/javascripts/api/tableau.embedding.3.4.0.js";
+} from "https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js  ";
 
 let vizDiv,
   currentWidth,
@@ -154,5 +154,8 @@ function scaleViz(currentWidth, maxWidth, deviceType) {
         elems[i].style.position = "absolute";
       }
     }
+
+    // After applying the CSS transform and other adjustments, set visibility to visible.
+    vizDiv.style.visibility = "visible";
   }
 }
